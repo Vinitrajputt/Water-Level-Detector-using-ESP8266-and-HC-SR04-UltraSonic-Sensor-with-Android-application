@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!-- Background layer (gray) -->
+        <item android:id="@android:id/background">
+            <shape>
+                <corners android:radius="10dp"/>
+                <solid android:color="#E0E0E0"/> <!-- Gray color for background -->
+            </shape>
+        </item>
+
+        <!-- Progress layer (yellow) -->
+        <item android:id="@android:id/progress">
+            <clip>
+                <shape>
+                    <corners android:radius="4dp"/>
+                    <solid android:color="#000000"/> <!-- Yellow color for progress -->
+                </shape>
+            </clip>
+        </item>
+
+    </layer-list>
+<!--</selector>-->

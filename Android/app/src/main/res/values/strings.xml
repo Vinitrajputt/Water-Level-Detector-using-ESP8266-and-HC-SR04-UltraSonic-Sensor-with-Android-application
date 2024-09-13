@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Water monitor</string>
+    <string name="water_level">Water Level</string>
+</resources>

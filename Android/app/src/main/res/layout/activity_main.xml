@@ -1,0 +1,230 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Water Level Section -->
+    <TextView
+        android:id="@+id/waterLevelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/water_level"
+
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/waterLevelPercentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="45% Available"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/waterLevelVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Calculating" />
+    </LinearLayout>
+
+
+
+    <!-- Progress Bar for Water Level -->
+    <ProgressBar
+        android:id="@+id/waterLevelProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:progress="45"
+        android:max="100"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- Pump Info -->
+    <TextView
+        android:id="@+id/pumpRunning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pump: Unknown(please wait)"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/timeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Remaining: --:--"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tankFullTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Water Usage Trend Section -->
+    <TextView
+        android:id="@+id/waterUsageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Usage Trend"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/chartDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today(not enough data available)"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Placeholder for chart (Replace with a real chart later) -->
+    <LinearLayout
+        android:id="@+id/barChartPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#E0E0E0"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="120dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="100dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="85dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="120dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="100dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_graph_bar"
+            android:layout_margin="8dp"/>
+        <!-- Additional placeholder bars can go here -->
+    </LinearLayout>
+
+
+    <!-- Radio buttons for Daily/Weekly selection -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_radiogroup"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <RadioButton
+            android:id="@+id/radioDaily"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_selector"
+            android:button="@null"
+            android:checked="true"
+            android:padding="10dp"
+            android:text="Daily"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:stateListAnimator="@animator/radio_button_animation"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/radioWeekly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_selector"
+            android:button="@null"
+            android:padding="10dp"
+            android:text="Weekly"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:stateListAnimator="@animator/radio_button_animation"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <!-- Last updated and refresh button -->
+    <TextView
+        android:id="@+id/lastUpdatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last updated: --"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh Now"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/refresh_now_button"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@null"/>
+
+
+
+</LinearLayout>
