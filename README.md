@@ -1,0 +1,2 @@
+# Water-Level-Detector-using-ESP8266-and-HC-SR04-UltraSonic-Sensor-with-Android-application
+This project develops a smart water level monitoring system using an ESP8266 microcontroller, an HC-SR04 ultrasonic sensor, and an Android application. It provides real-time water level measurements, detects pump status, estimates time to fill/empty, and visualizes water usage trends, all accessible through a user-friendly mobile interface.
