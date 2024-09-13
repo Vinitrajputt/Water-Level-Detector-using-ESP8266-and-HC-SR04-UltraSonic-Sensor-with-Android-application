@@ -35,13 +35,12 @@ This project implements a smart water level monitoring system using an ESP8266 m
 ## ⚙️ Circuit Diagram
 
 
-[![Circuit Diagram](circuit_diagram.png)](circuit_diagram.png)
-
+<img src="circuit_diagram.png" alt="Circuit Diagram" width="600"> 
 
 ## 📱 Android Application Interface
 
 
-[![Android App Screenshot](app_screenshot.png)](app_screenshot.png)
+<img src="app_screenshot.png" alt="Android App Screenshot" width="300">
 
 
 ## 💻 Code Overview
